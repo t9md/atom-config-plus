@@ -6,7 +6,15 @@ This library is intending to be used in Atom Package.
 
 # How to use
 
-## In one file.
+# Install
+
+* In your Package directory
+
+```
+npm install --save atom-config-plus
+```
+
+# Use in your package source.
 
 ```coffeescript
 ConfigPlus = require 'atom-config-plus'
@@ -34,6 +42,9 @@ module.exports =
     settings.get 'paramBoolean' # => true
     settings.toggle 'paramBoolean', log: true
       # => console.log your-package.paramBoolean: false
+
+  deactivate: ->
+    settings.dispose()
 ```
 
 ## Or settings required from multiple files.
@@ -51,7 +62,7 @@ config =
     type: 'boolean'
     default: false
 
-module.exports = ConfigPlus.new('your-package', config)
+module.exports = new ConfigPlus 'your-package', config
 ```
 
 * main.coffee

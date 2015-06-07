@@ -1,6 +1,6 @@
 {
   "name": "atom-config-plus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wrapper for atom.config",
   "main": "lib/index.js",
   "repository": {
@@ -20,5 +20,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-shell": "^1.1.2",
     "rimraf": "^2.3.4"
-  }
+  },
+  "dependencies": {}
 }
