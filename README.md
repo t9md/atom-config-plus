@@ -1,10 +1,9 @@
 # atom-config-plus
 
-Simple wrapper for `atom.config` for [Atom](https://atom.io/).
+`atom-config-plus` is simple wrapper for `atom.config` of [Atom](https://atom.io/).
 
-This library is intending to be used in Atom Package.  
-
-# How to use
+This not atom package.  
+This is node module(=library) intending to be used from your [Atom](https://atom.io/) package.  
 
 # Install
 
@@ -27,13 +26,15 @@ config =
     type: 'boolean'
     default: false
 
-settings = ConfigPlus.new('your-package', config)
+settings = new ConfigPlus 'your-package', config
 
 module.exports =
   config: settings.config
 
   activate: (state) ->
+    # Equivalent to `atom.cofig.get 'your-package.paramString`'
     settings.get 'paramString' # => foo
+    
     settings.set 'paramString', 'bar'
     settings.get 'paramString' # => bar
 
