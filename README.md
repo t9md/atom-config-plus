@@ -26,7 +26,7 @@ config =
     type: 'boolean'
     default: false
 
-settings = new ConfigPlus 'your-package', config
+settings = new ConfigPlus('your-package', config)
 
 module.exports =
   config: settings.config
@@ -34,7 +34,7 @@ module.exports =
   activate: (state) ->
     # Equivalent to `atom.cofig.get 'your-package.paramString`'
     settings.get 'paramString' # => foo
-    
+
     settings.set 'paramString', 'bar'
     settings.get 'paramString' # => bar
 
@@ -63,7 +63,7 @@ config =
     type: 'boolean'
     default: false
 
-module.exports = new ConfigPlus 'your-package', config
+module.exports = new ConfigPlus('your-package', config)
 ```
 
 * main.coffee

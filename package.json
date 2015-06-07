@@ -1,6 +1,6 @@
 {
   "name": "atom-config-plus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Wrapper for atom.config",
   "main": "lib/index.js",
   "repository": {
