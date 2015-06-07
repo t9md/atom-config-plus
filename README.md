@@ -2,7 +2,7 @@
 
 Simple wrapper for `atom.config` for [Atom](https://atom.io/).
 
-This library is intending used in your Atom Package.  
+This library is intending to be used in Atom Package.  
 
 # How to use
 
@@ -35,7 +35,6 @@ module.exports =
     settings.toggle 'paramBoolean', log: true
       # => console.log your-package.paramBoolean: false
 ```
-
 
 ## Or settings required from multiple files.
 
